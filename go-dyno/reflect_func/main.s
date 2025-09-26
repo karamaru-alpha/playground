@@ -1,199 +1,202 @@
 # command-line-arguments
-main.main STEXT size=202 args=0x0 locals=0x78 funcid=0x0 align=0x0
-	0x0000 00000 (./main.go:5)	TEXT	main.main(SB), ABIInternal, $120-0
+main.main STEXT size=215 args=0x0 locals=0x80 funcid=0x0 align=0x0
+	0x0000 00000 (./main.go:5)	TEXT	main.main(SB), ABIInternal, $128-0
 	0x0000 00000 (./main.go:5)	CMPQ	SP, 16(R14)
 	0x0004 00004 (./main.go:5)	PCDATA	$0, $-2
-	0x0004 00004 (./main.go:5)	JLS	187
+	0x0004 00004 (./main.go:5)	JLS	205
 	0x000a 00010 (./main.go:5)	PCDATA	$0, $-1
 	0x000a 00010 (./main.go:5)	PUSHQ	BP
 	0x000b 00011 (./main.go:5)	MOVQ	SP, BP
-	0x000e 00014 (./main.go:5)	SUBQ	$112, SP
+	0x000e 00014 (./main.go:5)	SUBQ	$120, SP
 	0x0012 00018 (./main.go:5)	FUNCDATA	$0, gclocals·g5+hNtRBP6YXNjfog7aZjQ==(SB)
-	0x0012 00018 (./main.go:5)	FUNCDATA	$1, gclocals·6eB0WEzh5QXp0CX6bnFiuw==(SB)
-	0x0012 00018 (./main.go:6)	MOVQ	$0, main.add+32(SP)
-	0x001b 00027 (./main.go:7)	MOVQ	$0, main..autotmp_2+96(SP)
+	0x0012 00018 (./main.go:5)	FUNCDATA	$1, gclocals·zdx/2EDyvd927PomWAlBvQ==(SB)
+	0x0012 00018 (./main.go:6)	MOVQ	$0, main.add+80(SP)
+	0x001b 00027 (./main.go:7)	MOVQ	$0, main..autotmp_5+104(SP)
 	0x0024 00036 (./main.go:7)	LEAQ	type:func(int, int) int(SB), AX
 	0x002b 00043 (./main.go:7)	XORL	BX, BX
 	0x002d 00045 (./main.go:7)	PCDATA	$1, $0
 	0x002d 00045 (./main.go:7)	CALL	reflect.TypeOf(SB)
-	0x0032 00050 (./main.go:7)	MOVQ	AX, main..autotmp_3+80(SP)
-	0x0037 00055 (./main.go:7)	MOVQ	BX, main..autotmp_3+88(SP)
-	0x003c 00060 (./main.go:7)	LEAQ	main.main.func1·f(SB), CX
-	0x0043 00067 (./main.go:7)	CALL	reflect.MakeFunc(SB)
-	0x0048 00072 (./main.go:7)	MOVQ	AX, main..autotmp_4+56(SP)
-	0x004d 00077 (./main.go:7)	MOVQ	BX, main..autotmp_4+64(SP)
-	0x0052 00082 (./main.go:7)	MOVQ	CX, main..autotmp_4+72(SP)
-	0x0057 00087 (./main.go:9)	CALL	reflect.Value.Interface(SB)
-	0x005c 00092 (./main.go:9)	MOVQ	AX, main..autotmp_5+40(SP)
-	0x0061 00097 (./main.go:9)	MOVQ	BX, main..autotmp_5+48(SP)
-	0x0066 00102 (./main.go:9)	LEAQ	type:func(int, int) int(SB), CX
-	0x006d 00109 (./main.go:9)	CMPQ	AX, CX
-	0x0070 00112 (./main.go:9)	JEQ	116
-	0x0072 00114 (./main.go:9)	JMP	171
-	0x0074 00116 (./main.go:9)	MOVQ	BX, main..autotmp_1+104(SP)
-	0x0079 00121 (./main.go:9)	MOVQ	(BX), CX
-	0x007c 00124 (./main.go:9)	MOVL	$1, AX
-	0x0081 00129 (./main.go:9)	MOVQ	BX, DX
-	0x0084 00132 (./main.go:9)	MOVL	$2, BX
-	0x0089 00137 (./main.go:9)	CALL	CX
-	0x008b 00139 (./main.go:9)	MOVQ	AX, main..autotmp_6+24(SP)
-	0x0090 00144 (./main.go:7)	CALL	runtime.printlock(SB)
-	0x0095 00149 (./main.go:7)	MOVQ	main..autotmp_6+24(SP), AX
-	0x009a 00154 (./main.go:7)	CALL	runtime.printint(SB)
-	0x009f 00159 (./main.go:7)	NOP
-	0x00a0 00160 (./main.go:7)	CALL	runtime.printunlock(SB)
-	0x00a5 00165 (./main.go:10)	ADDQ	$112, SP
-	0x00a9 00169 (./main.go:10)	POPQ	BP
-	0x00aa 00170 (./main.go:10)	RET
-	0x00ab 00171 (./main.go:9)	MOVQ	CX, BX
-	0x00ae 00174 (./main.go:9)	LEAQ	type:interface {}(SB), CX
-	0x00b5 00181 (./main.go:9)	CALL	runtime.panicdottypeE(SB)
-	0x00ba 00186 (./main.go:9)	XCHGL	AX, AX
-	0x00bb 00187 (./main.go:9)	NOP
-	0x00bb 00187 (./main.go:5)	PCDATA	$1, $-1
-	0x00bb 00187 (./main.go:5)	PCDATA	$0, $-2
-	0x00bb 00187 (./main.go:5)	NOP
-	0x00c0 00192 (./main.go:5)	CALL	runtime.morestack_noctxt(SB)
-	0x00c5 00197 (./main.go:5)	PCDATA	$0, $-1
-	0x00c5 00197 (./main.go:5)	JMP	0
-	0x0000 49 3b 66 10 0f 86 b1 00 00 00 55 48 89 e5 48 83  I;f.......UH..H.
-	0x0010 ec 70 48 c7 44 24 20 00 00 00 00 48 c7 44 24 60  .pH.D$ ....H.D$`
+	0x0032 00050 (./main.go:7)	MOVQ	AX, main.addFunctionType+56(SP)
+	0x0037 00055 (./main.go:7)	MOVQ	BX, main.addFunctionType+64(SP)
+	0x003c 00060 (./main.go:8)	LEAQ	main.main.func1·f(SB), CX
+	0x0043 00067 (./main.go:8)	MOVQ	CX, main.addFunction+72(SP)
+	0x0048 00072 (./main.go:11)	MOVQ	main.addFunctionType+56(SP), AX
+	0x004d 00077 (./main.go:11)	MOVQ	main.addFunctionType+64(SP), BX
+	0x0052 00082 (./main.go:11)	CALL	reflect.MakeFunc(SB)
+	0x0057 00087 (./main.go:11)	MOVQ	AX, main.addFunctionValue+32(SP)
+	0x005c 00092 (./main.go:11)	MOVQ	BX, main.addFunctionValue+40(SP)
+	0x0061 00097 (./main.go:11)	MOVQ	CX, main.addFunctionValue+48(SP)
+	0x0066 00102 (./main.go:12)	CALL	reflect.Value.Interface(SB)
+	0x006b 00107 (./main.go:12)	MOVQ	AX, main..autotmp_6+88(SP)
+	0x0070 00112 (./main.go:12)	MOVQ	BX, main..autotmp_6+96(SP)
+	0x0075 00117 (./main.go:12)	LEAQ	type:func(int, int) int(SB), CX
+	0x007c 00124 (./main.go:12)	NOP
+	0x0080 00128 (./main.go:12)	CMPQ	AX, CX
+	0x0083 00131 (./main.go:12)	JEQ	135
+	0x0085 00133 (./main.go:12)	JMP	189
+	0x0087 00135 (./main.go:12)	MOVQ	BX, main..autotmp_4+112(SP)
+	0x008c 00140 (./main.go:12)	MOVQ	(BX), CX
+	0x008f 00143 (./main.go:12)	MOVL	$1, AX
+	0x0094 00148 (./main.go:12)	MOVQ	BX, DX
+	0x0097 00151 (./main.go:12)	MOVL	$2, BX
+	0x009c 00156 (./main.go:12)	CALL	CX
+	0x009e 00158 (./main.go:12)	MOVQ	AX, main..autotmp_7+24(SP)
+	0x00a3 00163 (./main.go:12)	CALL	runtime.printlock(SB)
+	0x00a8 00168 (./main.go:12)	MOVQ	main..autotmp_7+24(SP), AX
+	0x00ad 00173 (./main.go:12)	CALL	runtime.printint(SB)
+	0x00b2 00178 (./main.go:12)	CALL	runtime.printunlock(SB)
+	0x00b7 00183 (./main.go:14)	ADDQ	$120, SP
+	0x00bb 00187 (./main.go:14)	POPQ	BP
+	0x00bc 00188 (./main.go:14)	RET
+	0x00bd 00189 (./main.go:12)	MOVQ	CX, BX
+	0x00c0 00192 (./main.go:12)	LEAQ	type:interface {}(SB), CX
+	0x00c7 00199 (./main.go:12)	CALL	runtime.panicdottypeE(SB)
+	0x00cc 00204 (./main.go:12)	XCHGL	AX, AX
+	0x00cd 00205 (./main.go:12)	NOP
+	0x00cd 00205 (./main.go:5)	PCDATA	$1, $-1
+	0x00cd 00205 (./main.go:5)	PCDATA	$0, $-2
+	0x00cd 00205 (./main.go:5)	CALL	runtime.morestack_noctxt(SB)
+	0x00d2 00210 (./main.go:5)	PCDATA	$0, $-1
+	0x00d2 00210 (./main.go:5)	JMP	0
+	0x0000 49 3b 66 10 0f 86 c3 00 00 00 55 48 89 e5 48 83  I;f.......UH..H.
+	0x0010 ec 78 48 c7 44 24 50 00 00 00 00 48 c7 44 24 68  .xH.D$P....H.D$h
 	0x0020 00 00 00 00 48 8d 05 00 00 00 00 31 db e8 00 00  ....H......1....
-	0x0030 00 00 48 89 44 24 50 48 89 5c 24 58 48 8d 0d 00  ..H.D$PH.\$XH...
-	0x0040 00 00 00 e8 00 00 00 00 48 89 44 24 38 48 89 5c  ........H.D$8H.\
-	0x0050 24 40 48 89 4c 24 48 e8 00 00 00 00 48 89 44 24  $@H.L$H.....H.D$
-	0x0060 28 48 89 5c 24 30 48 8d 0d 00 00 00 00 48 39 c8  (H.\$0H......H9.
-	0x0070 74 02 eb 37 48 89 5c 24 68 48 8b 0b b8 01 00 00  t..7H.\$hH......
-	0x0080 00 48 89 da bb 02 00 00 00 ff d1 48 89 44 24 18  .H.........H.D$.
-	0x0090 e8 00 00 00 00 48 8b 44 24 18 e8 00 00 00 00 90  .....H.D$.......
-	0x00a0 e8 00 00 00 00 48 83 c4 70 5d c3 48 89 cb 48 8d  .....H..p].H..H.
-	0x00b0 0d 00 00 00 00 e8 00 00 00 00 90 0f 1f 44 00 00  .............D..
-	0x00c0 e8 00 00 00 00 e9 36 ff ff ff                    ......6...
+	0x0030 00 00 48 89 44 24 38 48 89 5c 24 40 48 8d 0d 00  ..H.D$8H.\$@H...
+	0x0040 00 00 00 48 89 4c 24 48 48 8b 44 24 38 48 8b 5c  ...H.L$HH.D$8H.\
+	0x0050 24 40 e8 00 00 00 00 48 89 44 24 20 48 89 5c 24  $@.....H.D$ H.\$
+	0x0060 28 48 89 4c 24 30 e8 00 00 00 00 48 89 44 24 58  (H.L$0.....H.D$X
+	0x0070 48 89 5c 24 60 48 8d 0d 00 00 00 00 0f 1f 40 00  H.\$`H........@.
+	0x0080 48 39 c8 74 02 eb 36 48 89 5c 24 70 48 8b 0b b8  H9.t..6H.\$pH...
+	0x0090 01 00 00 00 48 89 da bb 02 00 00 00 ff d1 48 89  ....H.........H.
+	0x00a0 44 24 18 e8 00 00 00 00 48 8b 44 24 18 e8 00 00  D$......H.D$....
+	0x00b0 00 00 e8 00 00 00 00 48 83 c4 78 5d c3 48 89 cb  .......H..x].H..
+	0x00c0 48 8d 0d 00 00 00 00 e8 00 00 00 00 90 e8 00 00  H...............
+	0x00d0 00 00 e9 29 ff ff ff                             ...)...
 	rel 3+0 t=R_USEIFACE type:func(int, int) int+0
 	rel 39+4 t=R_PCREL type:func(int, int) int+0
 	rel 46+4 t=R_CALL reflect.TypeOf+0
 	rel 63+4 t=R_PCREL main.main.func1·f+0
-	rel 68+4 t=R_CALL reflect.MakeFunc+0
-	rel 88+4 t=R_CALL reflect.Value.Interface+0
-	rel 105+4 t=R_PCREL type:func(int, int) int+0
-	rel 137+0 t=R_CALLIND +0
-	rel 145+4 t=R_CALL runtime.printlock+0
-	rel 155+4 t=R_CALL runtime.printint+0
-	rel 161+4 t=R_CALL runtime.printunlock+0
-	rel 177+4 t=R_PCREL type:interface {}+0
-	rel 182+4 t=R_CALL runtime.panicdottypeE+0
-	rel 193+4 t=R_CALL runtime.morestack_noctxt+0
+	rel 83+4 t=R_CALL reflect.MakeFunc+0
+	rel 103+4 t=R_CALL reflect.Value.Interface+0
+	rel 120+4 t=R_PCREL type:func(int, int) int+0
+	rel 156+0 t=R_CALLIND +0
+	rel 164+4 t=R_CALL runtime.printlock+0
+	rel 174+4 t=R_CALL runtime.printint+0
+	rel 179+4 t=R_CALL runtime.printunlock+0
+	rel 195+4 t=R_PCREL type:interface {}+0
+	rel 200+4 t=R_CALL runtime.panicdottypeE+0
+	rel 206+4 t=R_CALL runtime.morestack_noctxt+0
 main.main.func1 STEXT size=456 args=0x18 locals=0xa0 funcid=0x0 align=0x0
-	0x0000 00000 (./main.go:7)	TEXT	main.main.func1(SB), ABIInternal, $160-24
-	0x0000 00000 (./main.go:7)	LEAQ	-32(SP), R12
-	0x0005 00005 (./main.go:7)	CMPQ	R12, 16(R14)
-	0x0009 00009 (./main.go:7)	PCDATA	$0, $-2
-	0x0009 00009 (./main.go:7)	JLS	416
-	0x000f 00015 (./main.go:7)	PCDATA	$0, $-1
-	0x000f 00015 (./main.go:7)	PUSHQ	BP
-	0x0010 00016 (./main.go:7)	MOVQ	SP, BP
-	0x0013 00019 (./main.go:7)	SUBQ	$152, SP
-	0x001a 00026 (./main.go:7)	FUNCDATA	$0, gclocals·Z8zdw/dq+fE82FieA9ctlQ==(SB)
-	0x001a 00026 (./main.go:7)	FUNCDATA	$1, gclocals·/1ICvnuTD7RiFZZ6b0NfZA==(SB)
-	0x001a 00026 (./main.go:7)	FUNCDATA	$5, main.main.func1.arginfo1(SB)
-	0x001a 00026 (./main.go:7)	MOVQ	AX, main.in+168(SP)
-	0x0022 00034 (./main.go:7)	MOVQ	BX, main.in+176(SP)
-	0x002a 00042 (./main.go:7)	MOVQ	CX, main.in+184(SP)
-	0x0032 00050 (./main.go:7)	MOVQ	$0, main.~r0+40(SP)
-	0x003b 00059 (./main.go:7)	MOVUPS	X15, main.~r0+48(SP)
-	0x0041 00065 (./main.go:8)	MOVQ	main.in+168(SP), DX
-	0x0049 00073 (./main.go:8)	MOVQ	main.in+176(SP), CX
-	0x0051 00081 (./main.go:8)	TESTQ	CX, CX
-	0x0054 00084 (./main.go:8)	JHI	91
-	0x0056 00086 (./main.go:8)	JMP	408
-	0x005b 00091 (./main.go:8)	MOVQ	(DX), AX
-	0x005e 00094 (./main.go:8)	MOVQ	8(DX), BX
-	0x0062 00098 (./main.go:8)	MOVQ	16(DX), CX
-	0x0066 00102 (./main.go:8)	MOVQ	AX, main..autotmp_5+104(SP)
-	0x006b 00107 (./main.go:8)	MOVQ	BX, main..autotmp_5+112(SP)
-	0x0070 00112 (./main.go:8)	MOVQ	CX, main..autotmp_5+120(SP)
-	0x0075 00117 (./main.go:8)	PCDATA	$1, $0
-	0x0075 00117 (./main.go:8)	CALL	reflect.Value.Int(SB)
-	0x007a 00122 (./main.go:8)	MOVQ	AX, main..autotmp_2+32(SP)
-	0x007f 00127 (./main.go:8)	MOVQ	main.in+168(SP), DX
-	0x0087 00135 (./main.go:8)	MOVQ	main.in+176(SP), CX
-	0x008f 00143 (./main.go:8)	CMPQ	CX, $1
-	0x0093 00147 (./main.go:8)	JHI	154
-	0x0095 00149 (./main.go:8)	JMP	398
-	0x009a 00154 (./main.go:8)	MOVQ	24(DX), AX
-	0x009e 00158 (./main.go:8)	MOVQ	32(DX), BX
-	0x00a2 00162 (./main.go:8)	MOVQ	40(DX), CX
-	0x00a6 00166 (./main.go:8)	MOVQ	AX, main..autotmp_6+80(SP)
-	0x00ab 00171 (./main.go:8)	MOVQ	BX, main..autotmp_6+88(SP)
-	0x00b0 00176 (./main.go:8)	MOVQ	CX, main..autotmp_6+96(SP)
-	0x00b5 00181 (./main.go:8)	PCDATA	$1, $1
-	0x00b5 00181 (./main.go:8)	CALL	reflect.Value.Int(SB)
-	0x00ba 00186 (./main.go:8)	MOVQ	AX, main..autotmp_3+24(SP)
-	0x00bf 00191 (./main.go:8)	MOVQ	main..autotmp_2+32(SP), DX
-	0x00c4 00196 (./main.go:8)	ADDQ	DX, AX
-	0x00c7 00199 (./main.go:8)	CALL	runtime.convT64(SB)
-	0x00cc 00204 (./main.go:8)	MOVQ	AX, main..autotmp_7+72(SP)
-	0x00d1 00209 (./main.go:8)	MOVQ	AX, BX
-	0x00d4 00212 (./main.go:8)	LEAQ	type:int64(SB), AX
-	0x00db 00219 (./main.go:8)	NOP
-	0x00e0 00224 (./main.go:8)	CALL	reflect.ValueOf(SB)
-	0x00e5 00229 (./main.go:8)	MOVQ	AX, main..autotmp_4+128(SP)
-	0x00ed 00237 (./main.go:8)	MOVQ	BX, main..autotmp_4+136(SP)
-	0x00f5 00245 (./main.go:8)	MOVQ	CX, main..autotmp_4+144(SP)
-	0x00fd 00253 (./main.go:8)	LEAQ	type:[1]reflect.Value(SB), AX
-	0x0104 00260 (./main.go:8)	PCDATA	$1, $2
-	0x0104 00260 (./main.go:8)	CALL	runtime.newobject(SB)
-	0x0109 00265 (./main.go:8)	MOVQ	AX, main..autotmp_8+64(SP)
-	0x010e 00270 (./main.go:8)	MOVQ	main..autotmp_4+128(SP), DX
-	0x0116 00278 (./main.go:8)	MOVQ	main..autotmp_4+136(SP), SI
-	0x011e 00286 (./main.go:8)	MOVQ	main..autotmp_4+144(SP), DI
-	0x0126 00294 (./main.go:8)	MOVQ	DI, 16(AX)
-	0x012a 00298 (./main.go:8)	CMPL	runtime.writeBarrier(SB), $0
-	0x0131 00305 (./main.go:8)	PCDATA	$0, $-2
-	0x0131 00305 (./main.go:8)	JEQ	309
-	0x0133 00307 (./main.go:8)	JMP	311
-	0x0135 00309 (./main.go:8)	JMP	342
-	0x0137 00311 (./main.go:8)	MOVQ	(AX), DI
-	0x013a 00314 (./main.go:8)	MOVQ	8(AX), R8
-	0x013e 00318 (./main.go:8)	NOP
-	0x0140 00320 (./main.go:8)	CALL	runtime.gcWriteBarrier4(SB)
-	0x0145 00325 (./main.go:8)	MOVQ	DX, (R11)
-	0x0148 00328 (./main.go:8)	MOVQ	DI, 8(R11)
-	0x014c 00332 (./main.go:8)	MOVQ	SI, 16(R11)
-	0x0150 00336 (./main.go:8)	MOVQ	R8, 24(R11)
-	0x0154 00340 (./main.go:8)	JMP	342
-	0x0156 00342 (./main.go:8)	MOVQ	DX, (AX)
-	0x0159 00345 (./main.go:8)	MOVQ	SI, 8(AX)
-	0x015d 00349 (./main.go:8)	PCDATA	$0, $-1
-	0x015d 00349 (./main.go:8)	MOVQ	main..autotmp_8+64(SP), AX
-	0x0162 00354 (./main.go:8)	TESTB	AL, (AX)
-	0x0164 00356 (./main.go:8)	JMP	358
-	0x0166 00358 (./main.go:8)	MOVQ	AX, main.~r0+40(SP)
-	0x016b 00363 (./main.go:8)	MOVQ	$1, main.~r0+48(SP)
-	0x0174 00372 (./main.go:8)	MOVQ	$1, main.~r0+56(SP)
-	0x017d 00381 (./main.go:8)	MOVL	$1, BX
-	0x0182 00386 (./main.go:8)	MOVQ	BX, CX
-	0x0185 00389 (./main.go:8)	ADDQ	$152, SP
-	0x018c 00396 (./main.go:8)	POPQ	BP
-	0x018d 00397 (./main.go:8)	RET
-	0x018e 00398 (./main.go:8)	MOVL	$1, AX
-	0x0193 00403 (./main.go:8)	PCDATA	$1, $1
-	0x0193 00403 (./main.go:8)	CALL	runtime.panicIndex(SB)
-	0x0198 00408 (./main.go:8)	XORL	AX, AX
-	0x019a 00410 (./main.go:8)	CALL	runtime.panicIndex(SB)
-	0x019f 00415 (./main.go:8)	XCHGL	AX, AX
-	0x01a0 00416 (./main.go:8)	NOP
-	0x01a0 00416 (./main.go:7)	PCDATA	$1, $-1
-	0x01a0 00416 (./main.go:7)	PCDATA	$0, $-2
-	0x01a0 00416 (./main.go:7)	MOVQ	AX, 8(SP)
-	0x01a5 00421 (./main.go:7)	MOVQ	BX, 16(SP)
-	0x01aa 00426 (./main.go:7)	MOVQ	CX, 24(SP)
-	0x01af 00431 (./main.go:7)	CALL	runtime.morestack_noctxt(SB)
-	0x01b4 00436 (./main.go:7)	PCDATA	$0, $-1
-	0x01b4 00436 (./main.go:7)	MOVQ	8(SP), AX
-	0x01b9 00441 (./main.go:7)	MOVQ	16(SP), BX
-	0x01be 00446 (./main.go:7)	MOVQ	24(SP), CX
-	0x01c3 00451 (./main.go:7)	JMP	0
+	0x0000 00000 (./main.go:8)	TEXT	main.main.func1(SB), ABIInternal, $160-24
+	0x0000 00000 (./main.go:8)	LEAQ	-32(SP), R12
+	0x0005 00005 (./main.go:8)	CMPQ	R12, 16(R14)
+	0x0009 00009 (./main.go:8)	PCDATA	$0, $-2
+	0x0009 00009 (./main.go:8)	JLS	416
+	0x000f 00015 (./main.go:8)	PCDATA	$0, $-1
+	0x000f 00015 (./main.go:8)	PUSHQ	BP
+	0x0010 00016 (./main.go:8)	MOVQ	SP, BP
+	0x0013 00019 (./main.go:8)	SUBQ	$152, SP
+	0x001a 00026 (./main.go:8)	FUNCDATA	$0, gclocals·Z8zdw/dq+fE82FieA9ctlQ==(SB)
+	0x001a 00026 (./main.go:8)	FUNCDATA	$1, gclocals·/1ICvnuTD7RiFZZ6b0NfZA==(SB)
+	0x001a 00026 (./main.go:8)	FUNCDATA	$5, main.main.func1.arginfo1(SB)
+	0x001a 00026 (./main.go:8)	MOVQ	AX, main.in+168(SP)
+	0x0022 00034 (./main.go:8)	MOVQ	BX, main.in+176(SP)
+	0x002a 00042 (./main.go:8)	MOVQ	CX, main.in+184(SP)
+	0x0032 00050 (./main.go:8)	MOVQ	$0, main.~r0+40(SP)
+	0x003b 00059 (./main.go:8)	MOVUPS	X15, main.~r0+48(SP)
+	0x0041 00065 (./main.go:9)	MOVQ	main.in+168(SP), DX
+	0x0049 00073 (./main.go:9)	MOVQ	main.in+176(SP), CX
+	0x0051 00081 (./main.go:9)	TESTQ	CX, CX
+	0x0054 00084 (./main.go:9)	JHI	91
+	0x0056 00086 (./main.go:9)	JMP	408
+	0x005b 00091 (./main.go:9)	MOVQ	(DX), AX
+	0x005e 00094 (./main.go:9)	MOVQ	8(DX), BX
+	0x0062 00098 (./main.go:9)	MOVQ	16(DX), CX
+	0x0066 00102 (./main.go:9)	MOVQ	AX, main..autotmp_5+104(SP)
+	0x006b 00107 (./main.go:9)	MOVQ	BX, main..autotmp_5+112(SP)
+	0x0070 00112 (./main.go:9)	MOVQ	CX, main..autotmp_5+120(SP)
+	0x0075 00117 (./main.go:9)	PCDATA	$1, $0
+	0x0075 00117 (./main.go:9)	CALL	reflect.Value.Int(SB)
+	0x007a 00122 (./main.go:9)	MOVQ	AX, main..autotmp_2+32(SP)
+	0x007f 00127 (./main.go:9)	MOVQ	main.in+168(SP), DX
+	0x0087 00135 (./main.go:9)	MOVQ	main.in+176(SP), CX
+	0x008f 00143 (./main.go:9)	CMPQ	CX, $1
+	0x0093 00147 (./main.go:9)	JHI	154
+	0x0095 00149 (./main.go:9)	JMP	398
+	0x009a 00154 (./main.go:9)	MOVQ	24(DX), AX
+	0x009e 00158 (./main.go:9)	MOVQ	32(DX), BX
+	0x00a2 00162 (./main.go:9)	MOVQ	40(DX), CX
+	0x00a6 00166 (./main.go:9)	MOVQ	AX, main..autotmp_6+80(SP)
+	0x00ab 00171 (./main.go:9)	MOVQ	BX, main..autotmp_6+88(SP)
+	0x00b0 00176 (./main.go:9)	MOVQ	CX, main..autotmp_6+96(SP)
+	0x00b5 00181 (./main.go:9)	PCDATA	$1, $1
+	0x00b5 00181 (./main.go:9)	CALL	reflect.Value.Int(SB)
+	0x00ba 00186 (./main.go:9)	MOVQ	AX, main..autotmp_3+24(SP)
+	0x00bf 00191 (./main.go:9)	MOVQ	main..autotmp_2+32(SP), DX
+	0x00c4 00196 (./main.go:9)	ADDQ	DX, AX
+	0x00c7 00199 (./main.go:9)	CALL	runtime.convT64(SB)
+	0x00cc 00204 (./main.go:9)	MOVQ	AX, main..autotmp_7+72(SP)
+	0x00d1 00209 (./main.go:9)	MOVQ	AX, BX
+	0x00d4 00212 (./main.go:9)	LEAQ	type:int64(SB), AX
+	0x00db 00219 (./main.go:9)	NOP
+	0x00e0 00224 (./main.go:9)	CALL	reflect.ValueOf(SB)
+	0x00e5 00229 (./main.go:9)	MOVQ	AX, main..autotmp_4+128(SP)
+	0x00ed 00237 (./main.go:9)	MOVQ	BX, main..autotmp_4+136(SP)
+	0x00f5 00245 (./main.go:9)	MOVQ	CX, main..autotmp_4+144(SP)
+	0x00fd 00253 (./main.go:9)	LEAQ	type:[1]reflect.Value(SB), AX
+	0x0104 00260 (./main.go:9)	PCDATA	$1, $2
+	0x0104 00260 (./main.go:9)	CALL	runtime.newobject(SB)
+	0x0109 00265 (./main.go:9)	MOVQ	AX, main..autotmp_8+64(SP)
+	0x010e 00270 (./main.go:9)	MOVQ	main..autotmp_4+128(SP), DX
+	0x0116 00278 (./main.go:9)	MOVQ	main..autotmp_4+136(SP), SI
+	0x011e 00286 (./main.go:9)	MOVQ	main..autotmp_4+144(SP), DI
+	0x0126 00294 (./main.go:9)	MOVQ	DI, 16(AX)
+	0x012a 00298 (./main.go:9)	CMPL	runtime.writeBarrier(SB), $0
+	0x0131 00305 (./main.go:9)	PCDATA	$0, $-2
+	0x0131 00305 (./main.go:9)	JEQ	309
+	0x0133 00307 (./main.go:9)	JMP	311
+	0x0135 00309 (./main.go:9)	JMP	342
+	0x0137 00311 (./main.go:9)	MOVQ	(AX), DI
+	0x013a 00314 (./main.go:9)	MOVQ	8(AX), R8
+	0x013e 00318 (./main.go:9)	NOP
+	0x0140 00320 (./main.go:9)	CALL	runtime.gcWriteBarrier4(SB)
+	0x0145 00325 (./main.go:9)	MOVQ	DX, (R11)
+	0x0148 00328 (./main.go:9)	MOVQ	DI, 8(R11)
+	0x014c 00332 (./main.go:9)	MOVQ	SI, 16(R11)
+	0x0150 00336 (./main.go:9)	MOVQ	R8, 24(R11)
+	0x0154 00340 (./main.go:9)	JMP	342
+	0x0156 00342 (./main.go:9)	MOVQ	DX, (AX)
+	0x0159 00345 (./main.go:9)	MOVQ	SI, 8(AX)
+	0x015d 00349 (./main.go:9)	PCDATA	$0, $-1
+	0x015d 00349 (./main.go:9)	MOVQ	main..autotmp_8+64(SP), AX
+	0x0162 00354 (./main.go:9)	TESTB	AL, (AX)
+	0x0164 00356 (./main.go:9)	JMP	358
+	0x0166 00358 (./main.go:9)	MOVQ	AX, main.~r0+40(SP)
+	0x016b 00363 (./main.go:9)	MOVQ	$1, main.~r0+48(SP)
+	0x0174 00372 (./main.go:9)	MOVQ	$1, main.~r0+56(SP)
+	0x017d 00381 (./main.go:9)	MOVL	$1, BX
+	0x0182 00386 (./main.go:9)	MOVQ	BX, CX
+	0x0185 00389 (./main.go:9)	ADDQ	$152, SP
+	0x018c 00396 (./main.go:9)	POPQ	BP
+	0x018d 00397 (./main.go:9)	RET
+	0x018e 00398 (./main.go:9)	MOVL	$1, AX
+	0x0193 00403 (./main.go:9)	PCDATA	$1, $1
+	0x0193 00403 (./main.go:9)	CALL	runtime.panicIndex(SB)
+	0x0198 00408 (./main.go:9)	XORL	AX, AX
+	0x019a 00410 (./main.go:9)	CALL	runtime.panicIndex(SB)
+	0x019f 00415 (./main.go:9)	XCHGL	AX, AX
+	0x01a0 00416 (./main.go:9)	NOP
+	0x01a0 00416 (./main.go:8)	PCDATA	$1, $-1
+	0x01a0 00416 (./main.go:8)	PCDATA	$0, $-2
+	0x01a0 00416 (./main.go:8)	MOVQ	AX, 8(SP)
+	0x01a5 00421 (./main.go:8)	MOVQ	BX, 16(SP)
+	0x01aa 00426 (./main.go:8)	MOVQ	CX, 24(SP)
+	0x01af 00431 (./main.go:8)	CALL	runtime.morestack_noctxt(SB)
+	0x01b4 00436 (./main.go:8)	PCDATA	$0, $-1
+	0x01b4 00436 (./main.go:8)	MOVQ	8(SP), AX
+	0x01b9 00441 (./main.go:8)	MOVQ	16(SP), BX
+	0x01be 00446 (./main.go:8)	MOVQ	24(SP), CX
+	0x01c3 00451 (./main.go:8)	JMP	0
 	0x0000 4c 8d 64 24 e0 4d 3b 66 10 0f 86 91 01 00 00 55  L.d$.M;f.......U
 	0x0010 48 89 e5 48 81 ec 98 00 00 00 48 89 84 24 a8 00  H..H......H..$..
 	0x0020 00 00 48 89 9c 24 b0 00 00 00 48 89 8c 24 b8 00  ..H..$....H..$..
@@ -1181,13 +1184,37 @@ type:*[1]reflect.Value SRODATA dupok size=56
 	rel 32+8 t=R_ADDR runtime.gcbits.0100000000000000+0
 	rel 40+4 t=R_ADDROFF type:.namedata.*[1]reflect.Value-+0
 	rel 48+8 t=R_ADDR type:[1]reflect.Value+0
+type:.namedata.*func([]reflect.Value) []reflect.Value- SRODATA dupok size=40
+	0x0000 00 26 2a 66 75 6e 63 28 5b 5d 72 65 66 6c 65 63  .&*func([]reflec
+	0x0010 74 2e 56 61 6c 75 65 29 20 5b 5d 72 65 66 6c 65  t.Value) []refle
+	0x0020 63 74 2e 56 61 6c 75 65                          ct.Value
+type:*func([]reflect.Value) []reflect.Value SRODATA dupok size=56
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 61 ae 45 ae 08 08 08 36 00 00 00 00 00 00 00 00  a.E....6........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 00 00 00 00 00 00 00 00                          ........
+	rel 24+8 t=R_ADDR runtime.memequal64·f+0
+	rel 32+8 t=R_ADDR runtime.gcbits.0100000000000000+0
+	rel 40+4 t=R_ADDROFF type:.namedata.*func([]reflect.Value) []reflect.Value-+0
+	rel 48+8 t=R_ADDR type:func([]reflect.Value) []reflect.Value+0
+type:func([]reflect.Value) []reflect.Value SRODATA dupok size=72
+	0x0000 08 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00  ................
+	0x0010 9b 6b d9 54 02 08 08 33 00 00 00 00 00 00 00 00  .k.T...3........
+	0x0020 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0030 01 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00  ................
+	0x0040 00 00 00 00 00 00 00 00                          ........
+	rel 32+8 t=R_ADDR runtime.gcbits.0100000000000000+0
+	rel 40+4 t=R_ADDROFF type:.namedata.*func([]reflect.Value) []reflect.Value-+0
+	rel 44+4 t=RelocType(-32763) type:*func([]reflect.Value) []reflect.Value+0
+	rel 56+8 t=R_ADDR type:[]reflect.Value+0
+	rel 64+8 t=R_ADDR type:[]reflect.Value+0
 main.main.func1·f SRODATA dupok size=8
 	0x0000 00 00 00 00 00 00 00 00                          ........
 	rel 0+8 t=R_ADDR main.main.func1+0
 gclocals·g5+hNtRBP6YXNjfog7aZjQ== SRODATA dupok size=8
 	0x0000 01 00 00 00 00 00 00 00                          ........
-gclocals·6eB0WEzh5QXp0CX6bnFiuw== SRODATA dupok size=10
-	0x0000 01 00 00 00 0a 00 00 00 00 00                    ..........
+gclocals·zdx/2EDyvd927PomWAlBvQ== SRODATA dupok size=10
+	0x0000 01 00 00 00 0b 00 00 00 00 00                    ..........
 gclocals·Z8zdw/dq+fE82FieA9ctlQ== SRODATA dupok size=11
 	0x0000 03 00 00 00 01 00 00 00 01 00 00                 ...........
 gclocals·/1ICvnuTD7RiFZZ6b0NfZA== SRODATA dupok size=14

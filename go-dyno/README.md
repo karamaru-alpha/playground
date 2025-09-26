@@ -14,27 +14,27 @@ func add(a, b int) int {
 
 ### Assembly about registers
 
-The first argument goes to register AX.
-The second argument goes to register BX.
+- The first argument goes to register AX.
+- The second argument goes to register BX.
 
 ```s
 0x000e 00014 (./main.go:4)	MOVL	$1, AX
 0x0013 00019 (./main.go:4)	MOVL	$2, BX
 ```
 
-cf. [func/main.s#L13-14](./func/main.s#L13-14)
+cf. [func/main.s#L13-L14](./func/main.s#L13-L14)
 
 ### Assembly about stack
 
-Copy the value of register AX (the first argument) to 24 bytes offset from SP.
-Copy the value of register BX (the second argument) to 32 bytes offset from SP.
+- Copy the value of register AX (the first argument) to 24 bytes offset from SP.
+- Copy the value of register BX (the second argument) to 32 bytes offset from SP.
 
 ```s
 0x0008 00008 (./main.go:7)	MOVQ	AX, main.a+24(SP)
 0x000d 00013 (./main.go:7)	MOVQ	BX, main.b+32(SP)
 ```
 
-cf. [func/main.s#L50-51](./func/main.s#L50-51)
+cf. [func/main.s#L50-L51](./func/main.s#L50-L51)
 
 ### Notes
 
@@ -54,7 +54,7 @@ Check how arguments are passed to functions that have array types as arguments.
 package main
 
 func main() {
-	print(add([2]int{}, 2))
+	print(add([2]int{1,2}, 2))
 }
 
 func add(a [2]int, b int) int {
@@ -62,38 +62,32 @@ func add(a [2]int, b int) int {
 }
 ```
 
-### Assembly about registers and stack
+### Assembly about registers
 
-For the int argument (b):
-
-- Passed via register AX
-- `MOVL $2, AX` sets the value in AX register
-
-For the array argument ([2]int):
-
-- Passed via stack directly
-- `MOVUPS X15, (SP)` places 16 bytes (2×8 bytes) on stack
+The second argument (`int`) goes to register AX.
 
 ```s
-0x000e 00014 (./main.go:4)	MOVUPS	X15, (SP)
 0x0013 00019 (./main.go:4)	MOVL	$2, AX
-0x0018 00024 (./main.go:4)	CALL	main.add(SB)
 ```
 
-cf. [arr_func/main.s#L13-16](./arr_func/main.s#L13-16)
+cf. [arr_func/main.s#L15](./arr_func/main.s#L15)
 
-### Assembly about function signature
+### Assembly about stack
 
-The function signature shows the total argument size:
+The first argument `[2]{1,2}` has each element allocated on the stack.
 
-- `$16-24` means 16 bytes local stack, 24 bytes arguments total
-- 24 bytes = 16 bytes (array) + 8 bytes (int)
+```s
+0x000e 00014 (./main.go:4)	MOVQ	$1, (SP)
+0x0016 00022 (./main.go:4)	MOVQ	$2, 8(SP)
+```
+
+From the function declaration, the total of arguments and return values is 24 bytes (args/[2]int:16bytes + returns/int:8bytes), which also shows that `[2]int` is allocated on the stack.
 
 ```s
 0x0000 00000 (./main.go:7)	TEXT	main.add(SB), NOSPLIT|ABIInternal, $16-24
 ```
 
-cf. [arr_func/main.s#L43](./arr_func/main.s#L43)
+cf. [arr_func/main.s#L45](./arr_func/main.s#L45)
 
 ### Notes
 
@@ -124,9 +118,9 @@ func (t *T) add(a int, b int) int {
 
 ### Assembly about registers
 
-The receiver gose to register AX.
-The first argument goes to register BX.
-The second argument goes to register CX.
+- The receiver gose to register AX.
+- The first argument goes to register BX.
+- The second argument goes to register CX.
 
 ```s
 0x000e 00014 (./main.go:4)	LEAQ	main..autotmp_3+24(SP), AX
@@ -135,13 +129,13 @@ The second argument goes to register CX.
 0x0022 00034 (./main.go:5)	MOVL	$2, CX
 ```
 
-cf. [method/main.s#L13-17](./method/main.s#L13-17)
+cf. [method/main.s#L13-L17](./method/main.s#L13-L17)
 
 ### Assembly about stack
 
-Copy the value of register AX (the receiver) to 24 bytes offset from SP.
-Copy the value of register BX (the first argument) to 32 bytes offset from SP.
-Copy the value of register CX (the second argument) to 40 bytes offset from SP.
+- Copy the value of register AX (the receiver) to 24 bytes offset from SP.
+- Copy the value of register BX (the first argument) to 32 bytes offset from SP.
+- Copy the value of register CX (the second argument) to 40 bytes offset from SP.
 
 ```s
 0x0008 00008 (./main.go:10)	MOVQ	AX, main.t+24(SP)
@@ -149,7 +143,7 @@ Copy the value of register CX (the second argument) to 40 bytes offset from SP.
 0x0012 00018 (./main.go:10)	MOVQ	CX, main.b+40(SP)
 ```
 
-cf. [method/main.s#L54-56](./method/main.s#L54-56)
+cf. [method/main.s#L54-L56](./method/main.s#L54-L56)
 
 ### Notes
 
@@ -174,9 +168,9 @@ func main() {
 
 ### Assembly about registers
 
-The function pointer goes to register CX.
-The first argument goes to register AX.
-The second argument goes to register BX.
+- The function pointer goes to register CX.
+- The first argument goes to register AX.
+- The second argument goes to register BX.
 
 Then the function is called.
 
@@ -188,16 +182,16 @@ Then the function is called.
 0x0089 00137 (./main.go:9)	CALL	CX
 ```
 
-cf. [reflect_func/main.s#L34-38](./reflect_func/main.s#L34-38)
+cf. [reflect_func/main.s#L34-L38](./reflect_func/main.s#L34-L38)
 
 ### Assembly about stack
 
-Copy the value of register AX (the first argument) to 168 bytes offset from SP.
-Copy the value of register BX (the second argument) to 176 bytes offset from SP.
+- Copy the value of register AX (the first argument) to 168 bytes offset from SP.
+- Copy the value of register BX (the second argument) to 176 bytes offset from SP.
 
 ```s
 0x001a 00026 (./main.go:7)	MOVQ	AX, main.in+168(SP)
 0x0022 00034 (./main.go:7)	MOVQ	BX, main.in+176(SP)
 ```
 
-cf. [reflect_func/main.s#L99-100](./reflect_func/main.s#L99-100)
+cf. [reflect_func/main.s#L99-L100](./reflect_func/main.s#L99-L100)
